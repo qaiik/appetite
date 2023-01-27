@@ -2,7 +2,7 @@
 array eater
 
 ```js
-const fmt = "\x18thomas\x00".split("")
+const fmt = Array.from(new TextEncoder().encode("\x18thomas\x00"))
 
 const p = new Plate(fmt)
 const age = p.int8() //24
